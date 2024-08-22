@@ -9,11 +9,11 @@ public class Chapter1 {
     final double minute = 60  * second;
     final double hour   = 60  * minute;
     final double day    = 24  * hour;
-    final double year   = 356 * day;
+    final double year   = 365 * day;
 
     double changeInPopulation   = birthPerSeconds + immigrantPerSeconds - deathPerSeconds;
     double newPopulation        = 5 * year * changeInPopulation;
-    double populationProjection = newPopulation + currentPopulation;
+    int populationProjection = (int)(newPopulation + currentPopulation);
 
     System.out.println("population projection: " + populationProjection);
   } 
